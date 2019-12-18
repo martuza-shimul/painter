@@ -1,0 +1,72 @@
+.heading {
+	padding: 0 0 30px 0;
+	h1 {
+		font-size: 2.8rem;
+		font-weight: 900;
+		color: $primary-color;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+.button {
+	background: $primary-color;
+	color: $text-rev;
+	padding: 0.5rem 1.5rem;
+	font-weight: 600;
+	border: 1px solid $primary-color;
+	border-radius: 0 2rem 2rem 0;
+	box-shadow: 3px 0px 8px 2px $text-color;
+	text-transform: uppercase;
+	&:hover {
+		background: $secondary-color;
+		color: $text-rev;
+		border: 1px solid $secondary-color;
+		transition: 0.6s ease-in;
+		z-index: 3;
+	}
+}
+.hide {
+	display: none;
+	// transition: display 0.4s ease-out;
+}
+.red {
+	color: $primary-color;
+}
+
+.form-group {
+	input,
+	textarea {
+		border-color: $primary-color;
+	}
+}
+
+.equal {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+.equal > [class*="col-"] {
+	display: flex;
+	flex-direction: column;
+}
+
+.bold {
+	font-weight: 900;
+}
+
+.seo {
+	width: 98%;
+	margin: 0 auto;
+	color: $text-rev;
+	h4 {
+		font-weight: 300;
+		font-size: 0.5rem;
+	}
+}
+
+.map {
+	padding-bottom: 10vh;
+}

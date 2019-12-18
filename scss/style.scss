@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "./variables";
+@import "./global";
+@import "./navbar";
+@import "./hero";
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	position: relative;
+	// height: 100%;
+	// overflow-y: scroll;
+}
+
+.active {
+	background: rgba($white, 0.9);
 }
