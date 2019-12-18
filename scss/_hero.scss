@@ -9,6 +9,8 @@
 	position: relative;
 	padding: 30vh 0 10vh 0;
 	color: $text-color;
+	// clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 95%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 
 	.hero-text {
 		background: rgba($text-color, 0.4);
@@ -45,8 +47,25 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		border-bottom: 100px solid $secondary-color;
-		// clip-path: polygon(0% 99.5%, 100% 93%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 100%, 0% 93%, 50% 100%, 100% 93%, 100% 100%);
+		// border-bottom: 100px solid $secondary-color;
+		// clip-path: polygon(100% 93%, 0% 100%, 100% 100%);
+		// clip-path: polygon(50% 100%, 0 94%, 100% 94%);
+		// clip-path: polygon(0% 100%, 0% 93%, 50% 100%, 100% 93%, 100% 100%);
+		// clip-path: polygon(
+		// 	0% 100%,
+		// 	7% 95%,
+		// 	15% 95%,
+		// 	28% 94%,
+		// 	33% 100%,
+		// 	35% 100%,
+		// 	49% 93%,
+		// 	61% 81%,
+		// 	73% 79%,
+		// 	83% 81%,
+		// 	94% 84%,
+		// 	99% 87%,
+		// 	100% 100%
+		// );
+		// clip-path: circle(7.2% at 98% 100%);
 	}
 }

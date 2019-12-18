@@ -22,3 +22,7 @@ body {
 .active {
 	background: rgba($white, 0.9);
 }
+::selection {
+	color: $background;
+	background: $secondary-color;
+}
