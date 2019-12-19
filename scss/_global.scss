@@ -10,29 +10,30 @@
 }
 
 .button {
-	background: darken($primary-color, 10%);
+	background: $primary-color;
 	// background: radial-gradient(
 	// 	rgba($secondary-color, 0.9),
 	// 	rgba($primary-color, 0.9)
 	// );
 	// background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(34,102,138,1) 0%, rgba(154,118,255,1) 80.6% );
 	color: $text-rev;
-	padding: 2rem 3.5rem 2rem 0.8rem;
+	// padding: 2rem 3.5rem 2rem 0.8rem;
+	padding: 1rem 1.5rem;
 	font-weight: 600;
 	border: 1px solid $primary-color;
-	border-radius: 0;
+	border-radius: 2rem;
 	box-shadow: 3px 0px 8px 2px $shad;
 	text-transform: uppercase;
 	// clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-	clip-path: polygon(
-		0% 20%,
-		60% 20%,
-		60% 0%,
-		100% 50%,
-		60% 100%,
-		60% 80%,
-		0% 80%
-	);
+	// clip-path: polygon(
+	// 	0% 20%,
+	// 	60% 20%,
+	// 	60% 0%,
+	// 	100% 50%,
+	// 	60% 100%,
+	// 	60% 80%,
+	// 	0% 80%
+	// );
 	&:hover {
 		background: $secondary-color;
 		color: $text-rev;
