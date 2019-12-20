@@ -6,6 +6,7 @@
 		color: $primary-color;
 		text-transform: uppercase;
 		text-align: center;
+		letter-spacing: 2px;
 	}
 }
 
@@ -18,7 +19,7 @@
 	// background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(34,102,138,1) 0%, rgba(154,118,255,1) 80.6% );
 	color: $text-rev;
 	// padding: 2rem 3.5rem 2rem 0.8rem;
-	padding: 1rem 1.5rem;
+	padding: 0.8rem 1.5rem;
 	font-weight: 600;
 	border: 1px solid $primary-color;
 	border-radius: 2rem;

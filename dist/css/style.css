@@ -9,12 +9,13 @@
   color: #3c40c6;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .button {
   background: #3c40c6;
   color: #f2f2f2;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-weight: 600;
   border: 1px solid #3c40c6;
   border-radius: 2rem;
@@ -254,6 +255,42 @@
   font-size: 1.1rem;
 }
 
+.painter-service {
+  padding: 5vh 0;
+  position: relative;
+  background: #d2dae2;
+}
+
+.painter-service .ps-image-holder {
+  padding: 0.2rem;
+  background: #3c40c6;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.painter-service .ps-content-holder {
+  padding: 3rem 1rem;
+  color: #1e272e;
+  text-align: center;
+}
+
+.painter-service .ps-content-holder h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #3c40c6;
+  text-transform: uppercase;
+}
+
+.painter-service .ps-content-holder p {
+  font-weight: 500;
+}
+
+.painter-service .ps-content-holder .button {
+  padding: 0.5rem 1rem;
+}
+
 .services {
   background: #f2f2f2;
   padding: 3% 0 9% 0;
@@ -449,7 +486,7 @@
 }
 
 .area-cover .tabs .tab a {
-  color: #f53b57;
+  color: #1e272e;
   font-size: 1rem;
   margin-top: -10px;
   text-transform: capitalize;
@@ -621,6 +658,9 @@
     border-bottom: 50px solid #f2f2f2;
     -webkit-clip-path: polygon(0% 100%, 50% 97%, 100% 100%);
             clip-path: polygon(0% 100%, 50% 97%, 100% 100%);
+  }
+  .sm-hide {
+    display: none;
   }
 }
 

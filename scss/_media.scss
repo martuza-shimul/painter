@@ -120,6 +120,9 @@
 			clip-path: polygon(0% 100%, 50% 97%, 100% 100%);
 		}
 	}
+	.sm-hide {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 575px) {
