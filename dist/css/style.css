@@ -610,6 +610,9 @@
   .page-header .ph-text .ph-title h1 {
     font-size: 1.6rem;
   }
+  .painter-service .ps-content-holder {
+    padding: 0.7rem 0.5rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -644,9 +647,9 @@
     font-weight: 600;
   }
   .services::after {
-    border-bottom: 40px solid #f53b57;
-    -webkit-clip-path: polygon(0% 100%, 0% 98%, 50% 100%, 100% 98%, 100% 100%);
-            clip-path: polygon(0% 100%, 0% 98%, 50% 100%, 100% 98%, 100% 100%);
+    border-bottom: 100px solid #f53b57;
+    -webkit-clip-path: polygon(0% 100%, 0% 96%, 100% 100%);
+            clip-path: polygon(0% 100%, 0% 96%, 100% 100%);
   }
   .service-gellary {
     padding: 6% 0 8% 0;
@@ -661,6 +664,9 @@
   }
   .sm-hide {
     display: none;
+  }
+  .painter-service .ps-content-holder {
+    padding: 3rem 1rem;
   }
 }
 
@@ -695,9 +701,9 @@
     padding: 0 4%;
   }
   .services::after {
-    border-bottom: 40px solid #f53b57;
-    -webkit-clip-path: polygon(0% 100%, 0% 98%, 50% 100%, 100% 98%, 100% 100%);
-            clip-path: polygon(0% 100%, 0% 98%, 50% 100%, 100% 98%, 100% 100%);
+    border-bottom: 80px solid #f53b57;
+    -webkit-clip-path: polygon(0% 100%, 0% 98%, 100% 100%);
+            clip-path: polygon(0% 100%, 0% 98%, 100% 100%);
   }
   .service-gellary {
     padding: 6% 0 14% 0;
