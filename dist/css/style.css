@@ -294,8 +294,8 @@
 }
 
 .services .service-template .st-header h4 {
-  color: #3c40c6;
-  font-size: 1.6rem;
+  color: #1e272e;
+  font-size: 1.4rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 20px 0;
@@ -325,6 +325,11 @@
 
 .services .service-template .st-body .st-content ul {
   margin-left: 15px;
+}
+
+.services .service-template .st-body .st-content h5 {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .services .service-template .st-footer {
