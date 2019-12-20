@@ -122,6 +122,18 @@
   background: rgba(242, 242, 242, 0.9);
 }
 
+.quote-engine-wrapper h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0 25px 0;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 0.3rem;
+  background: #f53b57;
+}
+
 .hero {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 39, 46, 0.4)), to(rgba(245, 59, 87, 0.4))), url("../img/hero.jpg") no-repeat center;
