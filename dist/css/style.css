@@ -124,22 +124,29 @@
 
 .hero {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 59, 87, 0.2)), to(rgba(60, 64, 198, 0.4))), url("../img/hero.jpg") no-repeat bottom center;
-  background: linear-gradient(rgba(245, 59, 87, 0.2), rgba(60, 64, 198, 0.4)), url("../img/hero.jpg") no-repeat bottom center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 39, 46, 0.4)), to(rgba(245, 59, 87, 0.4))), url("../img/hero.jpg") no-repeat center;
+  background: linear-gradient(rgba(30, 39, 46, 0.4), rgba(245, 59, 87, 0.4)), url("../img/hero.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  padding: 30vh 0 10vh 0;
+  padding: 10vh 0;
   color: #1e272e;
 }
 
 .hero .hero-text {
-  background: rgba(30, 39, 46, 0.4);
-  padding: 5vh 0;
-  border-radius: 0 10rem 10rem 0;
+  padding: 10vh 0;
+  position: relative;
+}
+
+.hero .hero-text .heading {
+  padding: 5vh 2vh;
+  border-radius: 5rem;
 }
 
 .hero .hero-text .heading h1 {
   color: #f2f2f2;
+  font-size: 2.6rem;
+  font-weight: 900;
+  text-align: left;
 }
 
 .hero .hero-text .content h3 {
@@ -167,6 +174,28 @@
   border-bottom: 100px solid #f53b57;
   -webkit-clip-path: polygon(100% 93%, 0% 100%, 100% 100%);
           clip-path: polygon(100% 93%, 0% 100%, 100% 100%);
+}
+
+.hero-shapes {
+  position: relative;
+  margin-top: 5px;
+}
+
+.hero-shapes .hs-content {
+  background: rgba(30, 39, 46, 0.5);
+  padding: 5% 5% 10% 5%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 50% 100%, 0 81%);
+          clip-path: polygon(0 0, 100% 0, 100% 81%, 50% 100%, 0 81%);
+}
+
+.hero-shapes .hs-content .hs-content-text {
+  font-size: 1.3rem;
+  color: #f2f2f2;
+  font-weight: 700;
+}
+
+.hero-button {
+  margin-top: 10px;
 }
 
 * {
