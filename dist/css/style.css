@@ -371,7 +371,7 @@
 
 .services .service-template .st-footer {
   background: #3c40c6;
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 2rem;
 }
 
 .services .service-template .st-footer a {
