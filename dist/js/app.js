@@ -47,7 +47,7 @@ const handleRadioClick = () => {
 		// const decision = list[i].checked;
 		if (list[i].checked) {
 			qepath.classList.add("hide");
-			qepathSecond.classList.remove("hide");
+			qepathType.classList.remove("hide");
 			counter++;
 		}
 	}
@@ -56,22 +56,22 @@ const handleRadioClick = () => {
 	}
 };
 
-const handleSecond = () => {
-	// e.preventDefault();
-	let list = qepathSecond.getElementsByTagName("input");
-	let counter = 0;
-	for (let i = 0; i < list.length; i++) {
-		// const decision = list[i].checked;
-		if (list[i].checked) {
-			qepathSecond.classList.add("hide");
-			qepathType.classList.remove("hide");
-			counter++;
-		}
-	}
-	if (counter == 0) {
-		qepathSecond.innerHTML += `<p class= "text-center red" style="font-weight: bold" >Please select something</p>`;
-	}
-};
+// const handleSecond = () => {
+// 	// e.preventDefault();
+// 	let list = qepathSecond.getElementsByTagName("input");
+// 	let counter = 0;
+// 	for (let i = 0; i < list.length; i++) {
+// 		// const decision = list[i].checked;
+// 		if (list[i].checked) {
+// 			qepathSecond.classList.add("hide");
+// 			qepathType.classList.remove("hide");
+// 			counter++;
+// 		}
+// 	}
+// 	if (counter == 0) {
+// 		qepathSecond.innerHTML += `<p class= "text-center red" style="font-weight: bold" >Please select something</p>`;
+// 	}
+// };
 
 const handleType = () => {
 	let list = qepathType.getElementsByTagName("input");
@@ -96,8 +96,8 @@ const handleThird = () => {
 		// const decision = list[i].checked;
 		if (list[i].checked) {
 			qepathThird.classList.add("hide");
-			// qepathFourth.classList.remove("hide");
-			qepathLast.classList.remove("hide");
+			qepathFourth.classList.remove("hide");
+			// qepathLast.classList.remove("hide");
 			counter++;
 		}
 	}
