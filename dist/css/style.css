@@ -551,18 +551,18 @@
 }
 
 .page-header {
-  height: 40vh;
+  min-height: 40vh;
   padding: 15vh 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 39, 46, 0.6)), to(rgba(60, 64, 198, 0.6))), url("../img/page-header-new.jpg") no-repeat bottom;
-  background: linear-gradient(rgba(30, 39, 46, 0.6), rgba(60, 64, 198, 0.6)), url("../img/page-header-new.jpg") no-repeat bottom;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 39, 46, 0.3)), to(rgba(245, 59, 87, 0.4))), url("../img/hero.jpg") no-repeat center;
+  background: linear-gradient(rgba(30, 39, 46, 0.3), rgba(245, 59, 87, 0.4)), url("../img/hero.jpg") no-repeat center;
   background-size: cover;
 }
 
 .page-header .ph-text .ph-title {
   text-transform: capitalize;
-  background: rgba(245, 59, 87, 0.2);
+  background: rgba(30, 39, 46, 0.2);
   padding: 5vh 0;
-  border-radius: 0 5rem 5rem 0;
+  border-radius: 5rem;
   color: #f2f2f2;
 }
 
