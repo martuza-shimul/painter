@@ -30,6 +30,10 @@ body {
 
 .active {
 	background: rgba($white, 0.9);
+	// background: lighten($primary-color, 30);
+	// .nav-link {
+	// 	color: $text-rev;
+	// }
 }
 ::selection {
 	color: $background;

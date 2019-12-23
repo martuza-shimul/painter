@@ -19,9 +19,11 @@
 				color: $text-color;
 				padding: 0.5rem 1rem;
 				font-weight: 700;
+				border-radius: 3rem;
 
 				&:hover {
-					background: rgba($secondary-color, 0.5);
+					// background: rgba($primary-color, 0.5);
+					background: lighten($primary-color, 30);
 				}
 			}
 			.nav-link.button {

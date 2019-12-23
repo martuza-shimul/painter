@@ -103,10 +103,11 @@
   color: #1e272e;
   padding: 0.5rem 1rem;
   font-weight: 700;
+  border-radius: 3rem;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  background: rgba(245, 59, 87, 0.5);
+  background: #b2b4e9;
 }
 
 .navbar .navbar-nav .nav-item .nav-link.button {
