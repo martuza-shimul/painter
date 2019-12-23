@@ -1,0 +1,696 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<!-- Bootstrap CDN for css -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<!-- custom css -->
+		<link rel="stylesheet" href="./dist/css/style.css" />
+
+		<title>Painter in London</title>
+
+				<!-- Favicons
+	================================================== -->
+	<link rel="icon" href="./dist/img/favicon.png" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./dist/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./dist/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="./dist/img/favicon.png" />
+	</head>
+	<body data-spy="scroll" data-target="#menu">
+		<div class="wrapper">
+			<nav  class="navbar navbar-expand-lg navbar-light" id="menu" >
+				<a href="#" class="navbar-brand" > 
+					<img class="img-fluid img-responsive" src="./dist/img/logo.png" alt="Painters in London logo">
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<!-- <li class="nav-item ">
+							<a  class="nav-link" href="#home"
+								>Home <span class="sr-only">(current)</span></a
+							>
+						</li> -->
+						<li class="nav-item">
+							<a class="nav-link scroll" href="#about"  >Why Us</a>
+						</li>
+						<li class="nav-item">
+							<a   class="nav-link scroll" href="#services" >Services</a>
+						</li>
+						<li class="nav-item">
+							<a   class="nav-link scroll" href="#rates" >Rates</a>
+						</li>
+						<li class="nav-item">
+							<a  class="nav-link scroll" href="#areas" >Coverage</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link button" id="button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Free Quote</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+      
+      <!-- Modal -->
+      <div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <div class="quote-engine-wrapper d-flex justify-content-center">
+                <form action="./dist/php/data.php" method="POST">
+                  <div class="first">
+                    <h5 class="center-align">What type of Paining do you need?</h5>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="first" value="Domestic Painting" type="radio"  />
+                        <span>Domestic Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="first" value="Commercial Painting" type="radio"  />
+                        <span>Commercial Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="first" type="radio" value="Exterior Painting"  />
+                        <span>Exterior Painting</span>
+                      </label>
+                    </p>
+                    
+                    <button onclick="handleRadioClick()"  type="button" class="btn button">Continue</button>
+                  </div>
+                  <!-- <div class="second hide">
+                    <h5 class="center-align">Which Vehicle need service?</h5>
+                    <p>
+                      <label>
+                        <input name="check[]" type="checkbox" value="Car" />
+                        <span>Car</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="check[]" type="checkbox" value="4X4" />
+                        <span>4X4</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="check[]" type="checkbox" value="Jeep" />
+                        <span>Jeep</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="check[]" type="checkbox" value="Van or Light Commercial" />
+                        <span>Van or Light Commercial</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="check[]" type="checkbox" value="Shower" />
+                        <span>Minibus</span>
+                      </label>
+                    </p>
+                    
+                    
+                     <button onclick="handleSecond()"  type="button" class="btn button">Continue</button> 
+                     
+                  </div> -->
+                  <div class="type hide">
+                    <h5 class="center-align">In Which area?</h5>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="East London" />
+                        <span>East London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="West London" />
+                        <span>West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="North London"  />
+                        <span>North London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="East central London"  />
+                        <span>East central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="West central London"  />
+                        <span>West central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="North West London"  />
+                        <span>North West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="South West London & Surrey"  />
+                        <span>South West London & Surrey</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="type" type="radio" value="South East London & North Kent"  />
+                        <span>South East London & North Kent</span>
+                      </label>
+                    </p>
+                    <button onclick="handleType()"  type="button" class="btn button">Continue</button>
+                     
+                  </div>
+                  <div class="third hide">
+                    <h5 class="center-align">When do you want this service completed?</h5>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="third" type="radio" value="As soon as possible" />
+                        <span>As soon as possible</span>
+                      </label>
+                    </p>
+                    
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="third" type="radio" value="Within the next month"  />
+                        <span>Within the next week</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="third" type="radio" value="Within the next 3 weeks"  />
+                        <span>Within the next 3 weeks</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="third" type="radio" value="Within one month"  />
+                        <span>Within one month</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="third" type="radio" value="I don't have a specific date in mind"  />
+                        <span>I don't have a specific date in mind</span>
+                      </label>
+                    </p>  
+                    <button onclick="handleThird()"  type="button" class="btn button">Continue</button>
+                  </div>
+                  <div class="fourth hide">
+                    <h5 class="center-align">Who will purchase the materials?</h5>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="fourth" type="radio" value="I will provide the materials" />
+                        <span>I will provide the materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="fourth" type="radio" value="I would like the pro to provide materials"  />
+                        <span>I would like the pro to provide materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="fourth" type="radio" value="I would like to discuss with the professional" />
+                        <span>I would like to discuss with the professional</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input  class="with-gap" name="fourth" type="radio" value="No materials needed" />
+                        <span>No materials needed</span>
+                      </label>
+                    </p>
+                    <button onclick="handleFourth()"  type="button" class="btn button">Continue</button>
+                  </div>
+                  <div class="last hide">
+                      <h5>Fill up the form to complete this request</h5>
+                    <div class="row">
+                      
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Name: "
+                            name="first-name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Email: "
+                            aria-describedby="emailHelp"
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Phone: "
+                            name="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Postcode : "
+                            name="postcode"
+                          />
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Vehicle Pick-up Postcode"
+                            name="pick_post"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Vehicle Drop off Postcode"
+                            name="drop_post"
+                            required
+                          />
+                        </div>
+                      </div> -->
+                      <div class="col-md-12">
+                          <div class="form-group">
+                              <textarea name="message" class="form-control" id="exampleFormControlTextarea1" placeholder="Description of your Problem" rows="3" required></textarea>
+                            </div>
+                      </div>
+                      
+                    </div>
+                    <button class="btn button">Submit </button>
+                  </div>   
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button" data-dismiss="modal">X</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<section class="page-header">
+				<div class="container-lg">
+					<div class="ph-text ">
+						<div class="ph-title text-center">
+							<h1>Painters in | Aldgate | London E1</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about" id="about">
+				<div class="container-md">
+					<div class="row">
+						<div class="col rates">
+							<div class="about-content">
+								<h3>
+									<small class="">TOTALLY TRANSPARENT</small> <br />
+									<span>PRICING POLICY</span>
+								</h3>
+								<p>
+									100% transparent rates and we have a clear, upfront, open and honest pricing system. Please contact our customer service representative to calculate approximate price for your repair or installation depending on peak or off peak hours. We do not charge for a call out, travelling, parking, congestion and there are no other hidden charges.
+								</p>
+								<p>
+									Our fully insured drivers bring in many years of recovery and
+									vehicle transportation experience, along with professional and
+									polite manners.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services" id="rates">
+					<div class="container-md">
+							<div class="heading">
+								<h1>Pricing</h1>
+							</div>
+							<div class="service-content-wrapper">
+								<div class="row equal">
+									<div class="col-sm-6 col-md-4">
+										<div class="service-template">
+											
+											<div class="st-header">
+													<h4>Recovery</h4>
+											</div>
+											<div class="st-price text-center">
+														<p><span>from</span><span class="amount">£39</span></p>
+											</div>
+											<div class="st-body">
+												
+												
+												<div class="st-content">
+													<ul>
+														<li>24/7 breakdown recovery</li>
+														<li>24/7 accident recovery</li>
+														<li>Flat tyre change</li>
+														<li>Out of fuel</li>
+														<li>Flat battery jump start</li>
+														<li>Compound recovery</li>
+													</ul>
+													<p>
+														We cater for the following vehicles:
+													</p>
+													<ul>
+														<li>Vans and light commercials</li>
+														<li>4x4</li>
+														<li>Cars</li>
+														<li>Minibuses</li>
+													</ul>
+												</div>
+												
+											</div>
+											<div class="st-footer ">
+													<a
+														href="tel:020 8088 3646"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														>020 8088 3646</a
+													>
+													<!-- <a
+														href="#"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														data-toggle="modal" data-target=".bd-example-modal-lg"
+														>Book Now</a
+													> -->
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="service-template">
+											<div class="st-header">
+													<h4>TRANSPORTATION</h4>
+												</div>
+												<div class="st-price text-center">
+													<p><span class="amount">£49</span></p>
+												</div>
+											<div class="st-body ">
+												
+												<div class="st-content">
+													<p>
+														Our team of professional and highly experienced drivers
+														are ready to take any job you throw at them, including:
+													</p>
+													<ul>
+														<li>Multi-vehicle transportation</li>
+														<li>Accident damaged vehicle transportation</li>
+														<li>Dealing with auction paperwork on your behalf.</li>
+													</ul>
+													<p>(Within 4 miles radius from base)</p>
+												</div>
+												
+											</div>
+											<div class="st-footer">
+													<a
+														href="tel:020 8088 3646"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														>020 8088 3646</a
+													>
+													<!-- <a
+														href="#"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														data-toggle="modal" data-target=".bd-example-modal-lg"
+														>Book Now</a
+													> -->
+												</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="service-template">
+											<div class="st-header">
+													<h4>Servicing</h4>
+												</div>
+												<div class="st-price text-center">
+													<p><span>from</span><span class="amount">£59</span></p>
+												</div>
+											<div class="st-body ">
+												
+												<div class="st-content">
+													<p>
+														No more hassle or time wasting at garages - we deal with
+														all that for you. Just sit, relax at home and we will
+														bring your vehicle back to you once it's done
+													</p>
+													<h5 class="bold">Commercial Breakdown Recovery</h5>
+													<p>(over 1.5 tonnes)</p>
+													<h5 class="bold text-capitalize">
+														large cars | vans | 4X4 | forklifts
+													</h5>
+													<p>We also scrap your unwanted vehicle free of charge.</p>
+												</div>
+												
+											</div>
+											<div class="st-footer  ">
+													<a
+														href="tel:020 8088 3646"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														>020 8088 3646</a
+													>
+													<!-- <a
+														href="#"
+														class="btn btn-lg btn-block"
+														role="button"
+														aria-pressed="true"
+														data-toggle="modal" data-target=".bd-example-modal-lg"
+														>Book Now</a
+													> -->
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+        
+        <div class="seo ">
+						<h4>car recovery near me |
+							car recovery services near me |
+							car recovery service near me |
+							car recovery east london |
+							car recovery london prices |
+							cheap car recovery near me |
+							car recovery hackney |
+							car recovery lewisham |
+							recovery truck |
+							breakdown recovery |
+							rac recovery |
+							green flag recovery |
+							car recovery services |
+							angel recovery |
+							van recovery |
+							car towed london |
+							car recovery east london |
+							east london recovery |
+							car recovery west london |
+							car recovery dartford |
+							car recovery south east london |
+							total car recovery |
+							car tow company |
+							car recovery lewisham |
+							car recovery aa |
+							total car recovery ltd |
+							car transporter price per mile |
+							
+				
+							
+							<p class="d-none d-md-block">
+									recovery feltham |
+									motorcycle recovery cost |
+									heavy recovery costs uk |
+									car towing services cost uk |
+									motors recovery |
+									recovery dagenham |
+									total recovery ltd |
+									vehicle tow service near me |
+									car recovery prices uk |
+									angel recovery reviews |
+									24 hour recovery service near me |
+									car towing services near me |
+									towing service near me |
+									car towing near me |
+									car towing service london |
+									car towing services cost uk |
+									caravan towing services near me |
+									tow service |
+									tow truck near me |
+									towing service near me |
+									car towing near me |
+									cheap car towing |
+									car towing cost |
+									car towing services cost uk |
+									car towing service south london |
+									cost of towing car to garage uk |
+									towing meaning |
+									vehicle recovery near me |
+									breakdown recovery near me |
+									tow truck near me |
+									caravan towing service |
+									car towing bar |
+									car towing |
+									car towed london |
+									car recovery east london |
+									car recovery london prices |
+									car recovery near me |
+									tow truck hire london |
+									car towing service south london |
+									car towing service croydon |
+									total car recovery ltd |
+									vehicle tow service near me |
+									caravan towing services near me |
+									cars recovery london limited |
+									recovery feltham |
+									24/7 recovery near me |
+									south london recovery |
+									recovery car |
+									vehicle recovery near me |
+									towing meaning |
+									tow truck near me |
+									towing company |
+									tow truck for sale |caravan towing service |car towing services near me |
+								car towing service croydon |
+								
+								total car recovery ltd |
+								
+								vehicle tow service near me |
+								
+								caravan towing services near me |
+								
+								cars recovery london limited |
+								
+								recovery feltham |
+								
+								24/7 recovery near me |
+								recovery truck near me |
+								car towing bar |car towed london |
+									tow truck uk |
+									car recovery east london |
+									24 hour tow truck near me |
+									car recovery london prices |
+									tow truck hire near me |
+									car recovery north london |
+									car tow company |
+									car towing services cost uk |
+									car towing service south london |
+									car towing service croydon |
+									tow truck prices uk |
+									caravan towing services near me |
+									total car recovery ltd |
+									vehicle tow service near me |
+									24/7 recovery near me |
+									tow truck hire london |
+									car towing service south london |</p>
+						</h4>
+					</div>
+				<div class="container-md">
+					<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.987707370633!2d-0.0793598846661132!3d51.51344151808306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876034c93ce51cd%3A0x839c60d47355ae7a!2sAldgate%2C%20London%2C%20UK!5e0!3m2!1sen!2sbd!4v1576586648840!5m2!1sen!2sbd" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</section>
+      
+			<section class="sticky-mobile d-sm-block d-md-none">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <p class="center-align"><img src="./dist/img/call-white.png" alt="Contact">  <a class="" href="tel:020 8088 3646">020 8088 3646</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer d-none d-md-block">
+        <div class="container-md">
+          <p class="copy text-center">Copyright © 2019 PAINTERS LONDON. All rights reserved.</p>
+        </div>
+      </section>
+		</div>
+
+		<!-- bootstrap js CDN -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<!-- cookies code -->
+		<!-- <script type="text/javascript" id="cookieinfo"
+        src="//cookieinfoscript.com/js/cookieinfo.min.js"> -->
+    </script>
+		<script src="./dist/js/app.js"></script>
+	</body>
+</html>
