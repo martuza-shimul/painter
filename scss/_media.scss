@@ -4,6 +4,22 @@
 			font-size: 2.4rem;
 		}
 	}
+	.hero {
+		.hero-text {
+			.heading {
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+	.hero-shapes {
+		.hs-content {
+			.hs-content-text {
+				font-size: 1rem;
+			}
+		}
+	}
 	.navbar-nav {
 		background: $text-rev;
 	}
