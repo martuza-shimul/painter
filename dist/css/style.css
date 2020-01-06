@@ -483,7 +483,11 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 150px;
+  min-width: 200px;
+}
+
+.area-cover .flex-item li {
+  max-width: 185px;
 }
 
 .area-cover .tabs .tab a {
