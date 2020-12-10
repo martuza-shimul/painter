@@ -1,6 +1,7 @@
 .page-header {
-  min-height: 40vh;
+  min-height: 50vh;
   padding: 15vh 0;
+  padding-top: calc(15vh + 80px);
   background: linear-gradient(
       rgba($background, 0.3),
       rgba($secondary-color, 0.4)
@@ -15,6 +16,14 @@
         rgba($secondary-color, 0.4)
       ),
       url("../img/privacy-header.jpg") no-repeat 50% 50%;
+  }
+  &.faq {
+    // min-height: 50vh;
+    background: linear-gradient(
+        rgba($background, 0.3),
+        rgba($secondary-color, 0.4)
+      ),
+      url("../img/faq.jpg") no-repeat 50% 50%;
   }
   .ph-text {
     // background: $secon-color;

@@ -87,6 +87,7 @@
   color: #f2f2f2;
   text-transform: uppercase;
   position: fixed;
+  background-color: #f2f2f2;
   height: 85px;
   width: 100vw;
   padding: 0 10vw;
@@ -600,8 +601,9 @@
 }
 
 .page-header {
-  min-height: 40vh;
+  min-height: 50vh;
   padding: 15vh 0;
+  padding-top: calc(15vh + 80px);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(210, 218, 226, 0.3)), to(rgba(245, 59, 87, 0.4))), url("../img/page-header.jpg") no-repeat center;
   background: linear-gradient(rgba(210, 218, 226, 0.3), rgba(245, 59, 87, 0.4)), url("../img/page-header.jpg") no-repeat center;
   background-size: cover;
@@ -610,6 +612,11 @@
 .page-header.privacy-policy {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(210, 218, 226, 0.3)), to(rgba(245, 59, 87, 0.4))), url("../img/privacy-header.jpg") no-repeat 50% 50%;
   background: linear-gradient(rgba(210, 218, 226, 0.3), rgba(245, 59, 87, 0.4)), url("../img/privacy-header.jpg") no-repeat 50% 50%;
+}
+
+.page-header.faq {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(210, 218, 226, 0.3)), to(rgba(245, 59, 87, 0.4))), url("../img/faq.jpg") no-repeat 50% 50%;
+  background: linear-gradient(rgba(210, 218, 226, 0.3), rgba(245, 59, 87, 0.4)), url("../img/faq.jpg") no-repeat 50% 50%;
 }
 
 .page-header .ph-text .ph-title {
@@ -643,6 +650,11 @@
 
 .pp-content .table thead th {
   vertical-align: middle;
+}
+
+.pp-content p.q {
+  font-weight: 700;
+  margin: 35px 0 10px;
 }
 
 @media screen and (max-width: 991px) {

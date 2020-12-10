@@ -1,0 +1,632 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN for css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CDN for css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+
+    <title>FAQ | Painters And Decorators</title>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="icon" href="./dist/img/favicon.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="./dist/img/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="./dist/img/favicon.png"
+    />
+    <link rel="apple-touch-icon-precomposed" href="./dist/img/favicon.png" />
+  </head>
+
+  <body data-spy="scroll" data-target="#menu">
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light" id="menu">
+        <a href="./index.html" class="navbar-brand">
+          <img
+            class="img-fluid img-responsive"
+            src="./dist/img/logo.png"
+            alt="Painters London"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item ">
+							<a  class="nav-link" href="#home"
+								>Home <span class="sr-only">(current)</span></a
+							>
+						</li> -->
+            <li class="nav-item">
+              <a class="nav-link scroll" href="./index.html#about">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="./index.html#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="./index.html#rates">Rates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="./index.html#areas">Coverage</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link button"
+                id="button"
+                href="#"
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+                >Free Quote</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+      <div
+        class="modal fade bd-example-modal-lg"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <div class="quote-engine-wrapper d-flex justify-content-center">
+                <form action="./dist/php/data.php" method="POST">
+                  <div class="first">
+                    <h5 class="center-align">
+                      What type of Service do you need?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          value="Domestic Painting"
+                          type="radio"
+                        />
+                        <span>Domestic Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          value="Commercial Painting"
+                          type="radio"
+                        />
+                        <span>Commercial Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          type="radio"
+                          value="Exterior Painting"
+                        />
+                        <span>Handyman Service</span>
+                      </label>
+                    </p>
+
+                    <button
+                      onclick="handleRadioClick()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+
+                  <div class="type hide">
+                    <h5 class="center-align">In Which area?</h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="East London"
+                        />
+                        <span>East London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="West London"
+                        />
+                        <span>West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="North London"
+                        />
+                        <span>North London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="East central London"
+                        />
+                        <span>East Central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="West central London"
+                        />
+                        <span>West Central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="North West London"
+                        />
+                        <span>North West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="South West London & Surrey"
+                        />
+                        <span>South West London & Surrey</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="South East London & North Kent"
+                        />
+                        <span>South East London </span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleType()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="third hide">
+                    <h5 class="center-align">
+                      When do you want this service completed?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="As soon as possible"
+                        />
+                        <span>As soon as possible</span>
+                      </label>
+                    </p>
+
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within the next month"
+                        />
+                        <span>Within the next week</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within the next 3 weeks"
+                        />
+                        <span>Within the next 3 weeks</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within one month"
+                        />
+                        <span>Within one month</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="I don't have a specific date in mind"
+                        />
+                        <span>I don't have a specific date in mind</span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleThird()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="fourth hide">
+                    <h5 class="center-align">
+                      Who will purchase the materials?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I will provide the materials"
+                        />
+                        <span>I will provide the materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like the pro to provide materials"
+                        />
+                        <span>I would like the pro to provide materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like to discuss with the professional"
+                        />
+                        <span
+                          >I would like to discuss with the professional</span
+                        >
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="No materials needed"
+                        />
+                        <span>No materials needed</span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleFourth()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="last hide">
+                    <h5>
+                      Please complete the details below for your FREE
+                      no-obligation quote
+                    </h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Name: "
+                            name="first-name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Email: "
+                            aria-describedby="emailHelp"
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Phone: "
+                            name="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Postcode : "
+                            name="postcode"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea
+                            name="message"
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            placeholder="Description of your Project"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn button">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button" data-dismiss="modal">
+                X
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="page-header faq">
+        <div class="container-lg">
+          <div class="ph-text">
+            <div class="ph-title text-center">
+              <h1>FAQ</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pp-content">
+        <div class="container-md">
+          <div class="row">
+            <div class="col">
+              <div class="faq">
+                <p class="q">Do you provide free quotes?</p>
+                <p class="a">
+                  Yes, we generally discuss the basics on the phone or via
+                  email, which is followed by a site visit to obtain the
+                  specifics. We will then email or post the quote
+                </p>
+                <p class="q">Should I accept a quote over the phone?</p>
+                <p class="a">
+                  No, you should always meet with a representative from the
+                  trade firm face-to-face and discuss the project. Give each
+                  contractor a copy of a detailed brief which outlines your
+                  requirements. Someone who quotes over the phone may
+                  underestimate the amount of work or preparation required and
+                  you could be hit with extra charges or a low-quality paint
+                  job.
+                </p>
+                <p class="q">Are You Insured?</p>
+                <p class="a">
+                  Yes, we have £1 million in public liability, workers
+                  compensation, and carry ‘contractors all risk insurance’ on a
+                  job-specific basis. All certificates are available on request
+                </p>
+                <p class="q">
+                  I have received a few quotes, with some high and some low and
+                  all over the place, why is that?
+                </p>
+                <p class="a">
+                  Yes, we hear this often in our industry. Ultimately it will
+                  come down to the level of thoroughness, attention to detail &
+                  quality of the finished product. For example, the amount of
+                  time that goes into the preparation of a surface & the
+                  subsequent coats it receives will reflect the final quality of
+                  the finishing. Our quotes are in-depth & clearly list the
+                  inclusions, which should enable you to compare the prices.
+                </p>
+                <p class="q">What kind of product will you be using?</p>
+                <p class="a">
+                  We use only the highest quality products. The brand we use can
+                  be influenced by other factors including customer preference,
+                  the nature of the project.
+                </p>
+                <p class="q">
+                  How do I maintain my property once it has been painted?
+                </p>
+                <p class="a">
+                  The only maintenance required would be to keep the surface
+                  clean. This is generally done with a low water pressure
+                  cleaner.
+                </p>
+                <p class="q">
+                  What is the difference between a good paint job and a bad one?
+                </p>
+                <p class="a">
+                  Not cutting corners, preparation, preparation, preparation;
+                  and finally, budgeting enough time to do the work properly.
+                </p>
+                <p class="q">When will I be required to make payment?</p>
+                <p class="a">
+                  Once we have provided the quote and you are happy to proceed,
+                  you will be required to make a 50% payment upfront and the
+                  balance due on completion. This is subject to change depending
+                  on the type and scope of the contract.
+                </p>
+                <p class="q">
+                  The last painters we hired would work for a few days then be
+                  gone for a few days, starting and stopping, will you stay on
+                  the job once you start?
+                </p>
+                <p class="a">
+                  Yes. We’ll stay with the project and work until it is
+                  completed. The same team will work on your job from start to
+                  finish because we assign different teams to different jobs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sticky-mobile d-sm-block d-md-none">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p class="center-align">
+                <img src="./dist/img/call-white.png" alt="Contact" />
+                <a class="" href="tel:020 8088 3213">020 8088 3213</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer links">
+        <div class="container-md">
+          <ul class="footer-links text-center">
+            <li>
+              <a
+                class="text-capitalize footer-link"
+                href="./privacy-policy.html"
+                >privacy policy</a
+              >
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./terms.html"
+                >Terms of use</a
+              >
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./faq.html">FAQ</a>
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./job.html">job</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer d-none d-md-block">
+        <div class="container-md">
+          <p class="copy text-center">
+            Copyright © 2019 PAINTER DECORATORS. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- bootstrap js CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- cookies code -->
+    <script
+      type="text/javascript"
+      id="cookieinfo"
+      src="//cookieinfoscript.com/js/cookieinfo.min.js"
+    ></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>
