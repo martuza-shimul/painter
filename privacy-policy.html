@@ -1,0 +1,1005 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN for css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CDN for css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+
+    <title>Privacy Policy | Painters And Decorators</title>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="icon" href="./dist/img/favicon.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="./dist/img/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="./dist/img/favicon.png"
+    />
+    <link rel="apple-touch-icon-precomposed" href="./dist/img/favicon.png" />
+  </head>
+
+  <body data-spy="scroll" data-target="#menu">
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light" id="menu">
+        <a href="../index.html" class="navbar-brand">
+          <img
+            class="img-fluid img-responsive"
+            src="./dist/img/logo.png"
+            alt="Painters London"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item ">
+							<a  class="nav-link" href="#home"
+								>Home <span class="sr-only">(current)</span></a
+							>
+						</li> -->
+            <li class="nav-item">
+              <a class="nav-link scroll" href="../index.html#about">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="../index.html#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="../index.html#rates">Rates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="../index.html#areas">Coverage</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link button"
+                id="button"
+                href="#"
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+                >Free Quote</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+      <div
+        class="modal fade bd-example-modal-lg"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <div class="quote-engine-wrapper d-flex justify-content-center">
+                <form action="./dist/php/data.php" method="POST">
+                  <div class="first">
+                    <h5 class="center-align">
+                      What type of Service do you need?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          value="Domestic Painting"
+                          type="radio"
+                        />
+                        <span>Domestic Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          value="Commercial Painting"
+                          type="radio"
+                        />
+                        <span>Commercial Painting</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="first"
+                          type="radio"
+                          value="Exterior Painting"
+                        />
+                        <span>Handyman Service</span>
+                      </label>
+                    </p>
+
+                    <button
+                      onclick="handleRadioClick()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+
+                  <div class="type hide">
+                    <h5 class="center-align">In Which area?</h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="East London"
+                        />
+                        <span>East London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="West London"
+                        />
+                        <span>West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="North London"
+                        />
+                        <span>North London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="East central London"
+                        />
+                        <span>East Central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="West central London"
+                        />
+                        <span>West Central London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="North West London"
+                        />
+                        <span>North West London</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="South West London & Surrey"
+                        />
+                        <span>South West London & Surrey</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="type"
+                          type="radio"
+                          value="South East London & North Kent"
+                        />
+                        <span>South East London </span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleType()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="third hide">
+                    <h5 class="center-align">
+                      When do you want this service completed?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="As soon as possible"
+                        />
+                        <span>As soon as possible</span>
+                      </label>
+                    </p>
+
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within the next month"
+                        />
+                        <span>Within the next week</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within the next 3 weeks"
+                        />
+                        <span>Within the next 3 weeks</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="Within one month"
+                        />
+                        <span>Within one month</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="third"
+                          type="radio"
+                          value="I don't have a specific date in mind"
+                        />
+                        <span>I don't have a specific date in mind</span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleThird()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="fourth hide">
+                    <h5 class="center-align">
+                      Who will purchase the materials?
+                    </h5>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I will provide the materials"
+                        />
+                        <span>I will provide the materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like the pro to provide materials"
+                        />
+                        <span>I would like the pro to provide materials</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="I would like to discuss with the professional"
+                        />
+                        <span
+                          >I would like to discuss with the professional</span
+                        >
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input
+                          class="with-gap"
+                          name="fourth"
+                          type="radio"
+                          value="No materials needed"
+                        />
+                        <span>No materials needed</span>
+                      </label>
+                    </p>
+                    <button
+                      onclick="handleFourth()"
+                      type="button"
+                      class="btn button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                  <div class="last hide">
+                    <h5>
+                      Please complete the details below for your FREE
+                      no-obligation quote
+                    </h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Name: "
+                            name="first-name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Email: "
+                            aria-describedby="emailHelp"
+                            name="email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Phone: "
+                            name="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Postcode : "
+                            name="postcode"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea
+                            name="message"
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            placeholder="Description of your Project"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn button">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button" data-dismiss="modal">
+                X
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="page-header privacy-policy">
+        <div class="container-lg">
+          <div class="ph-text">
+            <div class="ph-title text-center">
+              <h1>Privacy Policy</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pp-content">
+        <div class="container-md">
+          <div class="row">
+            <div class="col">
+              <div class="">
+                <h3 class="title">LOCAL TRADESMEN GROUP LTD</h3>
+                <h3 class="title">PRIVACY AND COOKIES NOTICE</h3>
+                <p class="">Last updated: 10 December 2020</p>
+
+                <h3 class="title">ABOUT THIS PRIVACY AND COOKIES NOTICE</h3>
+                <p>
+                  The website https://www.painter-decorators.co.uk (the Site) is
+                  operated by LOCAL TRADESMEN GROUP LTD (“we”, “us”, “our”), a
+                  company incorporated in England and Wales under company number
+                  12714290. Our registered office is at International House , 64
+                  Nile Street, Hoxton, London, N1 7SR .
+                </p>
+                <p>
+                  We are committed to protecting your privacy and complying with
+                  our data protection obligations under the Data Protection Act
+                  2018 (the DPA 2018), the General Data Protection Regulation
+                  2016/679 (the <strong> GDPR</strong>) and any other applicable
+                  UK legislation (together,
+                  <strong> Data Protection Law</strong>).
+                </p>
+                <p>
+                  When you interact with us or use the Site, we act as the data
+                  controller of your personal data. This means that we are
+                  responsible for processing your personal data and deciding how
+                  to use it. This privacy and cookies notice explains the types
+                  of personal data we may collect about you when you interact
+                  with us, why we collect it, what we use it for and what rights
+                  you have over that data. Personal data is any information
+                  about an identifiable person. Processing is anything we do
+                  with your personal data, including using, storing, sharing and
+                  deleting it.
+                </p>
+                <p>
+                  This notice was last updated on the date shown at the top. We
+                  may change this notice at any time by posting an updated
+                  version on the Site and will make reasonable efforts to bring
+                  any material changes to your attention. You may wish to check
+                  it before using the Site as any changes will be effective from
+                  the date that they are made.
+                </p>
+
+                <h3 class="title">CONTACT INFORMATION</h3>
+                <p>
+                  If you have any concerns or would like further information
+                  about our use of data or this notice in general, you can
+                  contact Adam Bakkar at
+                  <a href="mailto:info@painter-decorators.co.uk"
+                    >info@painter-decorators.co.uk</a
+                  >
+                  .
+                </p>
+
+                <h3 class="title">WHAT INFORMATION DO WE COLLECT?</h3>
+                <p>
+                  We collect, store and use the types of personal data set out
+                  in the table at the end of this notice.
+                </p>
+
+                <h3 class="title">HOW WILL WE USE YOUR PERSONAL DATA?</h3>
+                <p>
+                  We will use your personal data for the purposes set out in the
+                  table at the end of this notice.
+                </p>
+                <h3 class="title">HOW DO WE SHARE YOUR PERSONAL DATA?</h3>
+                <p>
+                  When we share personal data, we do so in accordance with Data
+                  Protection law. We may share certain personal data, where
+                  necessary, with employees, contractors, consultants or
+                  advisers, to facilitate sales and for general commercial
+                  purposes
+                </p>
+                <strong
+                  >In addition, where necessary, your personal data may be
+                  shared with:</strong
+                >
+                <p>
+                  if the company or business is sold, transferred or integrated
+                  with another business, with our advisers, a prospective
+                  purchaser, a prospective purchaser’s advisers or the new owner
+                  of the company or business to facilitate the process.
+                </p>
+                <p>
+                  We may also provide third parties with aggregated but
+                  anonymised information and analytics about our customers.
+                  Before we do so we will make sure that it does not identify
+                  you.
+                </p>
+
+                <h3 class="title">USE OF COOKIES AND SIMILAR TECHNOLOGIES</h3>
+                <p>
+                  We and our third-party service providers use cookies and
+                  similar technologies to collect information about, and
+                  relevant to, your usage of the Site. Cookies are small text
+                  files that are stored on your computer when you visit the
+                  Site. It is standard practice to use cookies to make your
+                  experience better when using a website.
+                </p>
+                <strong
+                  >We use the following categories of cookies and similar
+                  technologies on this Site:
+                </strong>
+                <p>
+                  <strong> Strictly necessary cookies:</strong> These cookies
+                  are essential to enable you to move around the Site and use
+                  its features, and to keep the site secure. Without these
+                  cookies, services you have asked for (such as remembering your
+                  login details or the items you placed in your basket) cannot
+                  be provided.
+                </p>
+                <p>
+                  <strong> Analytics cookies:</strong> These cookies collect
+                  information about how you use the Site, for instance which
+                  pages you go to most often, what searches you perform and if
+                  you get error messages from web pages. Information these
+                  cookies collect can be used to improve how the Site works.
+                </p>
+                <p>
+                  <strong> Social media cookies:</strong> These cookies allow
+                  you to share your activity on the Site on social media such as
+                  Facebook and Twitter. These cookies are not within our
+                  control. Please refer to the privacy policies of the social
+                  networks in question for information regarding how their
+                  cookies work
+                </p>
+                <p>
+                  <strong> Targeting or advertising cookies:</strong> These
+                  cookies record your visit to the Site, the pages you have
+                  visited and the links you have followed. We use this
+                  information to make our Site and the advertising displayed on
+                  it more relevant to your interests. We may also share this
+                  information with third parties for this purpose.
+                </p>
+                <p>
+                  When you visit the Site for the first time (and periodically
+                  after that), we will request your consent to the setting of
+                  all cookies other than strictly necessary cookies.
+                </p>
+                <p>
+                  You can delete existing cookies and disable some or all types
+                  of cookies in future if you wish. To disable some or all types
+                  of cookies, you will have to either change the settings on
+                  your browser or use the cookie manager tool on the Site. See
+                  <a
+                    href="https://www.allaboutcookies.org/manage-cookies/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.allaboutcookies.org/manage-cookies/</a
+                  >
+                  for information on how to change your browser settings. If you
+                  change your mind, you can enable cookies again at any time.
+                  Disabling cookies on your browser may stop the Site from
+                  working properly.
+                </p>
+                <p>
+                  To find out more about cookies please visit
+                  <a href="www.allaboutcookies.org">
+                    www.allaboutcookies.org.</a
+                  >
+                </p>
+
+                <h3 class="title">THIRD PARTY LINKS</h3>
+                <p>
+                  This Site contains links to other websites over which we have
+                  no control. We are not responsible for and do not review or
+                  endorse the privacy policies or practices of other Sites which
+                  you choose to access from this Site. We encourage you to
+                  review the privacy policies of those other Sites, so you can
+                  understand how they collect, use and share your personal
+                  information.
+                </p>
+                <h3>YOUR RIGHTS</h3>
+                <p>
+                  We respect your rights to privacy and will respond to requests
+                  for access or control over information about you in accordance
+                  with Data Protection Law. We may require you to verify your
+                  identity before we take any action.
+                </p>
+
+                <h3 class="title">YOUR RIGHTS</h3>
+                <p>
+                  We respect your rights to privacy and will respond to requests
+                  for access or control over information about you in accordance
+                  with Data Protection Law. We may require you to verify your
+                  identity before we take any action. <br />
+                  Depending on the reason we have your personal data, you have a
+                  right to: <br />
+                  access the personal information we hold about you (commonly
+                  known as subject access); <br />
+                  request that we correct or complete personal information we
+                  hold about you that is inaccurate or incomplete; <br />
+                  request that we erase your personal information in some
+                  circumstances, or object to our processing it as detailed at
+                  paragraph 8.5; <br />
+                  restrict how we use your personal information, in certain
+                  circumstances; <br />
+                  request that we provide you with copies of your personal
+                  information in a machine-readable format or transfer it across
+                  different services; and where we have asked for your consent
+                  to process your data, to withdraw this consent. <br />
+                  These rights are limited in some situations under Data
+                  Protection Law – for example, where we can demonstrate that we
+                  are under a legal obligation to process your data. <br />
+                  If you wish to exercise any of these rights, please contact us
+                  using the details in paragraph 2 above.
+                </p>
+
+                <h3 class="title">Your right to object</h3>
+                <p>
+                  You have a right to object to our processing of your personal
+                  data and ask us to stop doing so. If we are processing your
+                  personal data or direct marketing purposes (which includes
+                  profiling to the extent that it is related to such direct
+                  marketing) and you object to this, we will stop processing
+                  your personal data immediately. <br />
+                  If our processing of your personal data is in the public
+                  interest or pursuant to our legitimate interests and you
+                  object to this, we will stop processing your personal data
+                  unless we have compelling reasons which override your
+                  interests, or our use of your personal data is for the
+                  establishment, exercise or defence of legal claims. <br />
+                  We hope that we can satisfy any queries you may have about the
+                  way we process your data. However, if you have unresolved
+                  concerns you also have the right to complain to data
+                  protection authorities (in the UK, the Information
+                  Commissioner’s Office). You can call the ICO on 0303 123 1113
+                  or go to their website:
+                  <a
+                    href="https://ico.org.uk/make-a-complaint/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://ico.org.uk/make-a-complaint/</a
+                  >).
+                </p>
+
+                <h3 class="title">DATA RETENTION</h3>
+                <p>
+                  Your personal data will only be kept for as long as necessary
+                  for our purposes. Specific periods are set out in the table at
+                  the end of this notice.
+                </p>
+                <h3>DATA PROTECTION PRINCIPLES</h3>
+                <p>
+                  We process your personal data in accordance with the following
+                  principles: we process your personal data lawfully, fairly and
+                  in a transparent way; <br />
+                  we collect your personal data for specified, explicit and
+                  legitimate purposes; any further processing we do is
+                  compatible with the original purposes for which for which we
+                  collected it; <br />
+                  we only process personal data which is adequate, relevant and
+                  limited to what is necessary to achieve the purpose for which
+                  it is processed; <br />
+                  we take reasonable steps to ensure that all personal data is
+                  accurate and kept up to date where necessary; <br />
+                  we do not store personal data in a form which identifies you
+                  for any longer than is necessary for the purposes of
+                  processing; and <br />
+                  we process personal data securely and in a way that protects
+                  against unauthorised or unlawful processing, accidental loss,
+                  destruction or damage. <br />
+                  When we ask for your personal data we will tell you whether
+                  you are required by law or contract to provide it, and what
+                  will happen if you do not provide the data. <br />
+                  Any request for consent to the processing of your personal
+                  data will be made directly to you and will include information
+                  about why we require the personal data and what will be done
+                  with it.
+                </p>
+
+                <h3 class="title">WHAT IS OUR LAWFUL BASIS FOR PROCESSING?</h3>
+
+                <p>
+                  We will only process personal data when we have a lawful basis
+                  for doing that processing. The table at the end of this notice
+                  sets out the lawful basis we rely on for each type of data we
+                  process. <br />
+                  <strong>
+                    We will choose one of the lawful bases in the GDPR to
+                    justify how we use your personal data. These are:</strong
+                  >
+                </p>
+
+                <p>
+                  <strong> Consent:</strong> You have given consent to the
+                  processing of your personal data for one or more specific
+                  purposes. <br />
+                  <strong> Contract:</strong> The processing is necessary for
+                  the performance of a contract with you or in order to take
+                  steps at your request before entering into a contract. <br />
+                  <strong>Legal obligation:</strong> We need to process your
+                  personal data to comply with a legal obligation. <br />
+                  <strong>Vital interests:</strong> The processing is necessary
+                  to protect the vital interests of you or another person.
+                  <br />
+                  <strong> Public interest:</strong> Processing is necessary for
+                  the performance of a task carried out in the public interest
+                  or in the exercise of some official authority. <br />
+                  <strong> Legitimate interests:</strong> Processing is
+                  necessary for the purposes of legitimate interests pursued by
+                  us or someone else, except where such interests are overridden
+                  by your interests or fundamental rights and freedoms requiring
+                  the protection of your personal data.
+                </p>
+
+                <div class="d-none d-sm-block">
+                  <h3 class="title">TABLE OF PERSONAL INFORMATION WE USE</h3>
+                  <p>
+                    The table below sets out detailed information about our
+                    purposes for processing, the basis for processing and the
+                    retention period for the personal data.
+                  </p>
+
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Category of personal data</th>
+                        <th scope="col">Purpose of processing</th>
+                        <th scope="col">Lawful basis for processing</th>
+                        <th scope="col">Retention period</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Name and contact details</td>
+                        <td>
+                          To contact you with information, newsletters and
+                          marketing materials about our products and services
+                        </td>
+                        <td>Consent</td>
+                        <td>
+                          For three years since you gave consent, or until you
+                          withdraw consent if earlier
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Payment information</td>
+                        <td>
+                          To take payment and give refunds.For fraud prevention
+                          and detection
+                        </td>
+                        <td>
+                          Performance of contract. Compliance with legal
+                          obligation
+                        </td>
+                        <td>
+                          For three years since you last logged on to the Site
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Contact history</td>
+                        <td>
+                          To provide customer service and support. To train our
+                          staff
+                        </td>
+                        <td>
+                          Performance of contract. Legitimate interests in
+                          dealing with complaints or claims
+                        </td>
+                        <td>
+                          For six years since you last logged on to the Site
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Purchase history</td>
+                        <td>To find out what products you like</td>
+                        <td>Consent</td>
+                        <td>
+                          For three years since you gave consent, or until you
+                          withdraw consent if earlier
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Browser, device and Site usage information</td>
+                        <td>
+                          To improve the Site . To protect the Site against
+                          fraud. To set default options for you, such as
+                          language and currency
+                        </td>
+                        <td>
+                          Performance of contract. Legitimate interest in
+                          maintaining our Site
+                        </td>
+                        <td>
+                          For three years since you last logged on to the Site
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Responses to surveys, competitions and promotions
+                        </td>
+                        <td>To run the survey, competition or promotion</td>
+                        <td>
+                          Performance of contract. Legitimate interest in
+                          administering and/or improving our products and
+                          services generally
+                        </td>
+                        <td>For six years</td>
+                      </tr>
+                      <tr>
+                        <td>Customer comments and product reviews</td>
+                        <td>
+                          To improve our products and services. Where relevant,
+                          to establish, exercise or defend legal claims
+                        </td>
+                        <td>
+                          Performance of contract. Legitimate interest in
+                          dealing with complaints or claims and improving our
+                          products and/or services generally
+                        </td>
+                        <td>For six years</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Information generated in the course of the use of our
+                          products and services
+                        </td>
+                        <td>
+                          For internal research and development purposes. To
+                          improve and test the features and functions of our
+                          Site
+                        </td>
+                        <td>
+                          Performance of contract. Legitimate interest in
+                          maintaining our Site and improving our products and/or
+                          services generally
+                        </td>
+                        <td>For four years</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Information collected through cookies and similar
+                          technologies
+                        </td>
+                        <td>
+                          To conduct and store site usage analytics, statistical
+                          and trend analysis and market research. To generate
+                          customer profiles to facilitate marketing initiatives
+                        </td>
+                        <td>Consent</td>
+                        <td>Three years after you last visited the site</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sticky-mobile d-sm-block d-md-none">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p class="center-align">
+                <img src="./dist/img/call-white.png" alt="Contact" />
+                <a class="" href="tel:020 8088 3213">020 8088 3213</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer links">
+        <div class="container-md">
+          <ul class="footer-links text-center">
+            <li>
+              <a
+                class="text-capitalize footer-link"
+                href="./privacy-policy.html"
+                >privacy policy</a
+              >
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./terms.html"
+                >Terms of use</a
+              >
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./faq.html">FAQ</a>
+            </li>
+            <li>
+              <a class="text-capitalize footer-link" href="./job.html">job</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer d-none d-md-block">
+        <div class="container-md">
+          <p class="copy text-center">
+            Copyright © 2019 PAINTER DECORATORS. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- bootstrap js CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- cookies code -->
+    <script
+      type="text/javascript"
+      id="cookieinfo"
+      src="//cookieinfoscript.com/js/cookieinfo.min.js"
+    ></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>
