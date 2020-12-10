@@ -1,0 +1,62 @@
+.contact {
+	background: $secondary-color;
+	padding: 5vh 0;
+	.heading {
+		h1 {
+			color: $text-color;
+		}
+	}
+	.contact-box {
+		padding: 10px 0;
+
+		h3 {
+			font-size: 1.6rem;
+			font-weight: 600;
+			margin: 5px 0 30px 0;
+			color: $text-color;
+			text-transform: uppercase;
+		}
+		p {
+			// img {
+			// 	margin-right: 10px;
+			// }
+			span {
+				font-size: 1.1rem;
+				color: $text-color;
+				font-weight: 600;
+				margin-left: 5px;
+
+				a {
+					text-decoration: none;
+					color: $text-color;
+				}
+			}
+		}
+	}
+
+	.contact-form {
+		padding: 10px 0;
+
+		.form-group {
+			input,
+			textarea {
+				border-color: $primary-color;
+			}
+		}
+		.button {
+			background: $text-color;
+			color: $text-rev;
+
+			padding: 10px 30px;
+			border-color: $text-color;
+			font-size: 1.3rem;
+
+			&:hover {
+				background: $text-rev;
+				color: $text-color;
+				transform: scale(1.03, 1.03);
+				transition: 0.3s ease-in;
+			}
+		}
+	}
+}

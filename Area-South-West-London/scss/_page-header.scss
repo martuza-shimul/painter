@@ -1,0 +1,24 @@
+.page-header {
+	min-height: 40vh;
+	padding: 15vh 0;
+	background: linear-gradient(
+			rgba($background, 0.3),
+			rgba($secondary-color, 0.4)
+		),
+		url("../img/page-header.jpg") no-repeat center;
+	background-size: cover;
+	.ph-text {
+		// background: $secon-color;
+		.ph-title {
+			text-transform: capitalize;
+			background: rgba($text-color, 0.3);
+			padding: 5vh 0;
+			border-radius: 5rem;
+			color: $text-rev;
+			h1 {
+				font-weight: 900;
+				font-size: 2.3rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.sticky-mobile {
+	background: $primary-color;
+	color: $text-rev;
+	width: 100vw;
+	max-height: 53px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	border-radius: 10px 10px 0 0;
+
+	.row {
+		margin-bottom: 0;
+
+		p {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			font-size: 1.6rem;
+			font-weight: 600;
+			padding: 10px 0;
+
+			img {
+				margin-right: 10px;
+			}
+
+			a {
+				color: $text-rev;
+			}
+		}
+	}
+}
+
+.footer {
+	background: $secondary-color;
+	color: $text-rev;
+	font-size: 0.8rem;
+	font-weight: 500;
+	padding: 15px 0;
+	margin: -1px 0;
+	p {
+		margin: 0;
+	}
+}

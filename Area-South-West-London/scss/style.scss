@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "./variables";
+@import "./global";
+@import "./navbar";
+@import "./modal";
+@import "./hero";
+@import "./about";
+@import "./painter-service";
+@import "./service";
+@import "./contact";
+@import "./area-cover";
+@import "./footer";
+@import "./page-header";
+@import "./media";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	position: relative;
+	// height: 100%;
+	// overflow-y: scroll;
+}
+
+.active {
+	background: rgba($white, 0.9);
+	// background: lighten($primary-color, 30);
+	// .nav-link {
+	// 	color: $text-rev;
+	// }
+}
+::selection {
+	color: $background;
+	background: $secondary-color;
+}
+
+.light {
+	color: $text-rev;
+}

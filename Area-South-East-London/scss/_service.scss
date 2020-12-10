@@ -1,0 +1,95 @@
+.services {
+	background: $text-rev;
+	padding: 3% 0 9% 0;
+	position: relative;
+	margin: -1px 0;
+	box-sizing: border-box;
+	.service-template {
+		background: rgba($card-back, 0.7);
+		box-sizing: border-box;
+		margin: 3% 0;
+		padding: 4%;
+		border-radius: 7% 7% 0 0;
+		box-shadow: 3px 4px 10px 3px $shad;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.st-image {
+			margin: 15px 0;
+		}
+		.st-header {
+			text-align: center;
+
+			h4 {
+				color: $text-color;
+				font-size: 1.4rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				margin: 20px 0;
+			}
+		}
+		.st-price {
+			p {
+				span {
+					font-size: 0.7rem;
+					font-weight: 500;
+				}
+				.amount {
+					font-weight: 900;
+					font-size: 4.3rem;
+					color: $secondary-color;
+				}
+			}
+		}
+		.st-body {
+			margin: 15px 5px 0 5px;
+
+			.st-content {
+				margin-top: 15px;
+				font-size: 0.92rem;
+				font-weight: 700;
+				color: $text-color;
+				ul {
+					margin-left: 15px;
+				}
+				h5 {
+					font-size: 1rem;
+					font-weight: 700;
+				}
+				// border-top: 2px solid $text-color;
+			}
+		}
+		.st-footer {
+			background: $primary-color;
+			border-radius: 2rem;
+			a {
+				color: $text-rev;
+			}
+			&:hover {
+				background: $secondary-color;
+				// border: 1px solid $secondary-color;
+				transition: 0.6s ease-in;
+				z-index: 3;
+			}
+		}
+		&:hover {
+			transform: scale(1.05, 1.05);
+			box-shadow: 3px 4px 10px 3px $primary-color;
+			transition: 0.4s ease-in;
+		}
+	}
+
+	&::after {
+		content: "";
+		margin: 1px 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-bottom: 100px solid $secondary-color;
+		// clip-path: polygon(0% 99.5%, 100% 93%, 100% 100%, 0% 100%);
+		// clip-path: polygon(0% 100%, 0% 93%, 50% 100%, 100% 93%, 100% 100%);
+		clip-path: polygon(0% 100%, 0% 93%, 100% 100%);
+	}
+}

@@ -1,0 +1,73 @@
+.painter-service {
+	padding: 5vh 0;
+	position: relative;
+	background: $background;
+
+	.ps-image-holder {
+		// border: 2px solid $primary-color;
+		padding: 0.2rem;
+		background: $primary-color;
+		clip-path: polygon(
+			30% 0%,
+			70% 0%,
+			100% 30%,
+			100% 70%,
+			70% 100%,
+			30% 100%,
+			0% 70%,
+			0% 30%
+		);
+		// clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		// clip-path: polygon(
+		// 	0% 15%,
+		// 	15% 15%,
+		// 	15% 0%,
+		// 	85% 0%,
+		// 	85% 15%,
+		// 	100% 15%,
+		// 	100% 85%,
+		// 	85% 85%,
+		// 	85% 100%,
+		// 	15% 100%,
+		// 	15% 85%,
+		// 	0% 85%
+		// );
+	}
+	.ps-content-holder {
+		// clip-path: polygon(
+		// 	30% 0%,
+		// 	70% 0%,
+		// 	100% 30%,
+		// 	100% 70%,
+		// 	70% 100%,
+		// 	30% 100%,
+		// 	0% 70%,
+		// 	0% 30%
+		// );
+		padding: 4.5rem 1rem;
+		// background: $primary-color;
+		color: $text-color;
+		text-align: center;
+		h3 {
+			font-size: 1.6rem;
+			font-weight: 700;
+			letter-spacing: 1px;
+			margin-bottom: 15px;
+			color: $primary-color;
+			text-transform: uppercase;
+		}
+		p {
+			font-weight: 500;
+		}
+
+		.button {
+			// background: $secondary-color;
+			// border-color: $secondary-color;
+			padding: 0.5rem 1rem;
+
+			// &:hover {
+			// 	background: $text-color;
+			// }
+		}
+	}
+}

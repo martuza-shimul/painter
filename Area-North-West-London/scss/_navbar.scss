@@ -1,0 +1,67 @@
+.navbar {
+	color: $text-rev;
+	text-transform: uppercase;
+	position: fixed;
+	// top: 0;
+	// left: 0;
+	height: 85px;
+	width: 100vw;
+	padding: 0 10vw;
+	z-index: 99;
+	transition: 0.4s ease-out;
+	// clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 50% 30%, 0% 20%);
+	.navbar-brand {
+		color: $white;
+	}
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				color: $text-color;
+				padding: 0.5rem 1rem;
+				font-weight: 700;
+				border-radius: 3rem;
+
+				&:hover {
+					// background: rgba($primary-color, 0.5);
+					background: lighten($primary-color, 30);
+				}
+			}
+			.nav-link.button {
+				color: $text-rev;
+				padding: 0.5rem 1rem;
+				// clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+				// clip-path: polygon(
+				// 	0% 0%,
+				// 	100% 0%,
+				// 	100% 75%,
+				// 	75% 75%,
+				// 	75% 100%,
+				// 	50% 75%,
+				// 	0% 75%
+				// );
+
+				&:hover {
+					background: $secondary-color;
+				}
+			}
+		}
+	}
+
+	&.scrolled {
+		height: 65px;
+		background: rgba($text-rev, 0.9);
+
+		// #button {
+		// 	background: $text-rev;
+		// 	border: 1px solid $text-rev;
+		// 	color: $primary-color;
+		// 	&:hover {
+		// 		background: $secondary-color;
+		// 		border: 1px solid $secondary-color;
+		// 		transition: 0.6s ease-in;
+		// 		z-index: 3;
+		// 		color: $text-rev;
+		// 	}
+		// }
+	}
+}

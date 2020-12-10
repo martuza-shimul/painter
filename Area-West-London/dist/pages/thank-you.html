@@ -1,0 +1,406 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<!-- Bootstrap CDN for css -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<!-- custom css -->
+		<link rel="stylesheet" href="../css/style.css" />
+
+    <title>Painter in London</title>
+    
+    <!-- Favicons
+	================================================== -->
+	<link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="../img/favicon.png" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav  class="navbar navbar-expand-lg navbar-light" id="menu" >
+				<a href="../../index.html" class="navbar-brand" > 
+					<img class="img-fluid img-responsive" src="../img/logo.png" alt="Painters in London logo">
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<!-- <li class="nav-item ">
+							<a  class="nav-link" href="#home"
+								>Home <span class="sr-only">(current)</span></a
+							>
+						</li> -->
+						<li class="nav-item">
+							<a class="nav-link scroll" href="../../index.html#about"  >Why Us</a>
+						</li>
+						<li class="nav-item">
+							<a   class="nav-link scroll" href="../../index.html#services" >Services</a>
+						</li>
+						<li class="nav-item">
+							<a   class="nav-link scroll" href="../../index.html#rates" >Rates</a>
+						</li>
+						<li class="nav-item">
+							<a  class="nav-link scroll" href="../../index.html#areas" >Coverage</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link button" id="button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Free Quote</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<section id="home" class="hero">
+				<div class="container-lg">
+					<div class="hero-text ">
+						<div class="container-lg">
+							<div class="row">
+								<div class="col">
+									<div class="heading ">
+										<h1 class="text-center">THANK YOU</h1>
+                  </div>
+                  <h3 class="text-center light">The Details Have Been Sent And A Member Of Staff Will Be In Touch Shortly</h3>
+									
+								</div>
+								
+							</div>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+									<!-- <div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div> -->
+									<div class="modal-body">
+										<div class="quote-engine-wrapper d-flex justify-content-center">
+											<form action="./dist/php/data.php" method="POST">
+												<div class="first">
+													<h5 class="center-align">What type of Paining do you need?</h5>
+													<p>
+														<label>
+															<input  class="with-gap" name="first" value="Domestic Painting" type="radio"  />
+															<span>Domestic Painting</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="first" value="Commercial Painting" type="radio"  />
+															<span>Commercial Painting</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="first" type="radio" value="Exterior Painting"  />
+															<span>Exterior Painting</span>
+														</label>
+													</p>
+													
+													<button onclick="handleRadioClick()"  type="button" class="btn button">Continue</button>
+												</div>
+												<!-- <div class="second hide">
+													<h5 class="center-align">Which Vehicle need service?</h5>
+													<p>
+														<label>
+															<input name="check[]" type="checkbox" value="Car" />
+															<span>Car</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input name="check[]" type="checkbox" value="4X4" />
+															<span>4X4</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input name="check[]" type="checkbox" value="Jeep" />
+															<span>Jeep</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input name="check[]" type="checkbox" value="Van or Light Commercial" />
+															<span>Van or Light Commercial</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input name="check[]" type="checkbox" value="Shower" />
+															<span>Minibus</span>
+														</label>
+													</p>
+													
+													
+													 <button onclick="handleSecond()"  type="button" class="btn button">Continue</button> 
+													 
+												</div> -->
+												<div class="type hide">
+													<h5 class="center-align">In Which area?</h5>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="East London" />
+															<span>East London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="West London" />
+															<span>West London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="North London"  />
+															<span>North London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="East central London"  />
+															<span>East central London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="West central London"  />
+															<span>West central London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="North West London"  />
+															<span>North West London</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="South West London & Surrey"  />
+															<span>South West London & Surrey</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="type" type="radio" value="South East London & North Kent"  />
+															<span>South East London & North Kent</span>
+														</label>
+													</p>
+													<button onclick="handleType()"  type="button" class="btn button">Continue</button>
+													 
+												</div>
+												<div class="third hide">
+													<h5 class="center-align">When do you want this service completed?</h5>
+													<p>
+														<label>
+															<input  class="with-gap" name="third" type="radio" value="As soon as possible" />
+															<span>As soon as possible</span>
+														</label>
+													</p>
+													
+													<p>
+														<label>
+															<input  class="with-gap" name="third" type="radio" value="Within the next month"  />
+															<span>Within the next week</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="third" type="radio" value="Within the next 3 weeks"  />
+															<span>Within the next 3 weeks</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="third" type="radio" value="Within one month"  />
+															<span>Within one month</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="third" type="radio" value="I don't have a specific date in mind"  />
+															<span>I don't have a specific date in mind</span>
+														</label>
+													</p>  
+													<button onclick="handleThird()"  type="button" class="btn button">Continue</button>
+												</div>
+												<div class="fourth hide">
+													<h5 class="center-align">Who will purchase the materials?</h5>
+													<p>
+														<label>
+															<input  class="with-gap" name="fourth" type="radio" value="I will provide the materials" />
+															<span>I will provide the materials</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="fourth" type="radio" value="I would like the pro to provide materials"  />
+															<span>I would like the pro to provide materials</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="fourth" type="radio" value="I would like to discuss with the professional" />
+															<span>I would like to discuss with the professional</span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input  class="with-gap" name="fourth" type="radio" value="No materials needed" />
+															<span>No materials needed</span>
+														</label>
+													</p>
+													<button onclick="handleFourth()"  type="button" class="btn button">Continue</button>
+												</div>
+												<div class="last hide">
+														<h5>Fill up the form to complete this request</h5>
+													<div class="row">
+														
+														<div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="text"
+																	class="form-control"
+																	placeholder="Name: "
+																	name="first-name"
+																	required
+																/>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="email"
+																	class="form-control"
+																	id="exampleInputEmail1"
+																	placeholder="Email: "
+																	aria-describedby="emailHelp"
+																	name="email"
+																	required
+																/>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="text"
+																	class="form-control"
+																	placeholder="Phone: "
+																	name="phone"
+																	required
+																/>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="text"
+																	class="form-control"
+																	placeholder="Postcode : "
+																	name="postcode"
+																/>
+															</div>
+														</div>
+														<!-- <div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="text"
+																	class="form-control"
+																	placeholder="Vehicle Pick-up Postcode"
+																	name="pick_post"
+																	required
+																/>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<input
+																	type="text"
+																	class="form-control"
+																	placeholder="Vehicle Drop off Postcode"
+																	name="drop_post"
+																	required
+																/>
+															</div>
+														</div> -->
+														<div class="col-md-12">
+																<div class="form-group">
+																		<textarea name="message" class="form-control" id="exampleFormControlTextarea1" placeholder="Description of your Problem" rows="3" required></textarea>
+																	</div>
+														</div>
+														
+													</div>
+													<button class="btn button">Submit </button>
+												</div>   
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn button" data-dismiss="modal">X</button>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+			<section class="sticky-mobile d-sm-block d-md-none">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+									<p class="center-align"><img src="./dist/img/call-white.png" alt="Contact">  <a class="" href="tel:020 8088 3646">020 8088 3646</a></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			<!-- <section class="footer d-none d-md-block">
+				<div class="container-md">
+					<p class="copy text-center">Copyright © 2019 PAINTERS LONDON. All rights reserved.</p>
+				</div>
+			</section> -->
+		</div>
+
+		<!-- bootstrap js CDN -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="../js/app.js"></script>
+	</body>
+</html>
