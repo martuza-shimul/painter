@@ -36,6 +36,29 @@ $phone = $_POST['phone'];
 $postcode = $_POST['postcode'];
 $message = $_POST['message'];
 
+
+   // File upload functionality
+$new_path = "No files Uploaded";
+$counter = 0;
+if(!empty($_FILES['uploaded_file']))
+  {
+    $path = "uploads/";
+    $path = $path . basename( $_FILES['uploaded_file']['name']);
+
+    if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
+    //   $new_path = "<a href=" .$path. ">Check here</a>";
+    //   $new_path = "<a href=" echo $path ">Check here</a>";
+      $new_path = "https://painter-decorators.co.uk/dist/php/".$path;
+    //   $counter = 1;
+  
+    } else{
+        echo "There was an error uploading the file, please try again!";
+    }
+  }
+
+
+
+
 	
 // Create the email and send the message
 
@@ -43,7 +66,7 @@ $to = 'tripkeys@gmail.com'; // Add your email address inbetween the '' replacing
 $email_subject = "Website Quote Engine:  $first_name";
 $email_body = "You have received a new message from your Painters London website Quote Engine .\n\n"."Here are the details:\n\nName: $first_name\n\nPhone: $phone\n\nEmail: $email\n\n  Postcode: $postcode \n\n Message: $message
 
-\n\n\n Here is the Quote Request: \n Type of Work: $first\n  Area: $area \n Timeline: $third \n  Material Purchase: $material ";
+\n\n\n Here is the Quote Request: \n Type of Work: $first\n  Area: $area \n Timeline: $third \n  Material Purchase: $material\n Uploaded File: " .$new_path;
 $headers = "From: noreply@painters-london.co.uk\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 
 $headers .= "Reply-To: $email";	
