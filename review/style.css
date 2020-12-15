@@ -47,3 +47,9 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .review-wrapper h1 {
+    font-size: 45px;
+  }
+}
