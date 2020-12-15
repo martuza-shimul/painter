@@ -44,3 +44,19 @@ body {
 .light {
   color: $text-rev;
 }
+
+.faq {
+  .accordion {
+    .card {
+      .card-header {
+        button.btn-link {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.feedback {
+  padding: 50px 0;
+}

@@ -25,6 +25,14 @@
       ),
       url("../img/faq.jpg") no-repeat 50% 50%;
   }
+  &.feedback-header {
+    // min-height: 50vh;
+    background: linear-gradient(
+        rgba($background, 0.3),
+        rgba($secondary-color, 0.4)
+      ),
+      url("../img/feedback-bg.jpg") no-repeat 50% 50%;
+  }
   .ph-text {
     // background: $secon-color;
     .ph-title {
